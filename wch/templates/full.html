@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style/style.css">
-    <title>{%block tab_header%}{%endblock%}</title>
+    <title>Neptun</title>
 </head>
 <body>
-    <header>black</header>
-    <main>
-    {%block main%}
-    {%endblock%}
-    </main>
-    <footer>...</footer>
+    <header class="head_content">
+        <a href="#"><img src="../static/media/Group 2.png" alt="location" class="location_img"></a>
+        <div class="logotip">
+            <a href="#"><img src="../static/media/NEPTUN.png" alt="Logo" class="logo_img"></a>
+        </div>
+        <div class="search">
+            <a href="#"><img src="../static/media/Search.png" alt="Search" class="search_img"></a>
+        </div>
+    </header>
+          
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+    </div>
 </body>
 </html>
