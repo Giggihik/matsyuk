@@ -1,5 +1,13 @@
 @import "null.css";
 
-head,body, html {
+head,body,html {
     @import url('https://fonts.google.com/share?selection.family=Inknut+Antiqua:wght@300;400;500;600;700;800;900')
+}
+.h1 {
+    font-family: Inknut Antiqua;
+
+}
+body {
+    background-image: url('image\ 3.png');
+    background-size: cover;
 }
