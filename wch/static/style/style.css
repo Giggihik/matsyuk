@@ -1,13 +1,164 @@
 @import "null.css";
 
-head,body,html {
-    @import url('https://fonts.google.com/share?selection.family=Inknut+Antiqua:wght@300;400;500;600;700;800;900')
-}
-.h1 {
-    font-family: Inknut Antiqua;
+@import url('https://fonts.google.com/share?selection.family=Inknut+Antiqua:wght@300;400;500;600;700;800;900');
 
-}
 body {
-    background-image: url('image\ 3.png');
+    background-image: url(image\ 3.png);
     background-size: cover;
+    font-family: Inknut Antiqua;
+}
+
+.header {
+    background: #00000057; 
+    padding: 1rem 0; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.nav-container {
+    height: 135px;
+    width: 1333px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+ul li a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+ul li a:hover {
+    color: #4747e4;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 25px;
+    padding: 0.3rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main_searchbar {
+    border: none;
+    outline: none;
+    padding: 0.8rem 1rem;
+    border-radius: 25px;
+    width: 200px;
+    font-size: 0.9rem;
+}
+
+.main_searchbar::placeholder {
+    color: #999;
+}
+
+.search_button {
+    background: #15317c;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.search_button:hover {
+    background: #79247cc0;
+}
+
+.action-btn {
+    background: #11337f; /* Синий фон */
+    color: white; /* Белый текст */
+    border: none; /* Убираем стандартную рамку */
+    padding: 0.5rem 1rem; /* Отступы внутри кнопки */
+    border-radius: 4px; /* Закругленные углы */
+    cursor: pointer; /* Курсор-указатель при наведении */
+    font-size: 0.9rem; /* Размер текста */
+    font-weight: 500; /* Жирность текста */
+}
+
+.action-btn:hover {
+    background: #4f3671df; 
+}
+
+.main-hero {
+    height: 100vh; /* На весь экран */
+    color: white;
+    margin-top: 200px; /* Отступ ниже шапки */
+    padding: 3rem; /* Отступы со всех сторон */
+    padding-left: 0.1rem; /*  отступ слева */
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; 
+    font-size: 2.2rem;
+    font-family: Inknut Antiqua;
+}
+
+/* Вторая секция (лимонная) */
+.lemon-section {
+    background: white; /* Белый фон всего раздела */
+    padding: 4rem 2rem; /* Отступы вокруг прямоугольника */
+}
+
+.lemon-content {
+    background: #FFFDD0; /* Лимонный цвет только для контента */
+    color: #000;
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto; /* Центрирование прямоугольника */
+    text-align: center;
+    border-radius: 10px; /* Закругленные углы (опционально) */
+}
+
+.lemon-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.lemon-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.lemon-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
 }

@@ -1,20 +1,53 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style/style.css">
-    <title>NEPTUN</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>hotel</title>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>  
-    <h1></h1>
-        <main>
-            {% block main %}
-            {% endblock %}
-        </main>
+<body> 
+    <header class="header">
+    <div class="nav-container">
+        <a href="" class="logo">NEPTUN</a>
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li class="main-nav-list-item"><a href="#">STAYS</a></li>
+                <li class="main-nav-list-item"><a href="#">DINING</a></li>
+                <li class="main-nav-list-item"><a href="#">ENTERTAIMENT</a></li>
+                <li class="main-nav-list-item"><a href="#">AQUAVENTURE</a></li>
+                <div class="search-bar">
+         <div class="search">
+                <input type="search" placeholder="Search..." class="main_searchbar">
+                <button type="submit" class="search_button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" 
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
     </div>
+</div>
+                <li class="main-nav-list-item"><button class="action-btn">Book Now</button></li>
+            </ul>  
+        </nav>
+   </div>
+    </header>
+    <!-- Первая секция (главная страница) -->
+    <section class="main-hero">
+        <div class="main-content">
+            <h1>WELCOME TO NEPTUN RESORT</h1>
+            <p>your luxury experience starts here</p>
+        </div>
+    </section>
+
+    <!-- Вторая секция (появляется при скролле вниз) -->
+    <section class="lemon-section" id="lemon-section">
+        <div class="lemon-content">
+            <h1 class="lemon-title">THIS IS THE MOST ULTRA-LUXURY EXPERIENTIAL RESORT IN THE WORLD</h1>
+            <p class="lemon-description">Embrace a new standard of luxury, where the highest level of service sets a new benchmark for excellence. This is the place where something incredible happens at every moment of your stay.</p>
+            <p class="lemon-subtitle">This is Neptun.</p>
+        </div>
+    </section>
 </body>
 </html>
