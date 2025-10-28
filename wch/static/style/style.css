@@ -134,7 +134,7 @@ ul li a:hover {
 }
 
 .lemon-content {
-    background: #FFFDD0; /* Лимонный цвет только для контента */
+    background: #eeeaa8; /* Лимонный цвет только для контента */
     color: #000;
     padding: 4rem 2rem;
     max-width: 1000px;
