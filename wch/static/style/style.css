@@ -2,6 +2,12 @@
 
 @import url('https://fonts.google.com/share?selection.family=Inknut+Antiqua:wght@300;400;500;600;700;800;900');
 
+.spinnaker-regular {
+  font-family: "Spinnaker", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
     background-image: url(image\ 3.png);
     background-size: cover;
@@ -24,7 +30,7 @@ body {
 }
 
 .logo {
-    font-size: 2.3rem;
+    font-size: 2.6rem;
     font-weight: bold;
     color: white;
     line-height: 1;
@@ -99,9 +105,9 @@ ul li a:hover {
 }
 
 .action-btn {
-    background: #11337f; /* Синий фон */
-    color: white; /* Белый текст */
-    border: none; /* Убираем стандартную рамку */
+    background: #11337f; 
+    color: white; 
+    border: none; 
     padding: 0.5rem 1rem; /* Отступы внутри кнопки */
     border-radius: 4px; /* Закругленные углы */
     cursor: pointer; /* Курсор-указатель при наведении */
@@ -116,31 +122,35 @@ ul li a:hover {
 .main-hero {
     height: 100vh; /* На весь экран */
     color: white;
-    margin-top: 200px; /* Отступ ниже шапки */
+    margin-top: 300px; /* Отступ ниже шапки */
     padding: 3rem; /* Отступы со всех сторон */
-    padding-left: 0.1rem; /*  отступ слева */
+    padding-left: 0rem; /*  отступ слева */
     max-width: 1100px;
-    margin-left: auto;
+    margin-left: 111px;
     margin-right: auto;
     text-align: left; 
-    font-size: 2.2rem;
-    font-family: Inknut Antiqua;
+    font-size: 2.5rem;
+    font-family: Spinnaker;
 }
 
-/* Вторая секция (лимонная) */
+.main-content {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .lemon-section {
     background: white; /* Белый фон всего раздела */
     padding: 4rem 2rem; /* Отступы вокруг прямоугольника */
 }
 
 .lemon-content {
-    background: #eeeaa8; /* Лимонный цвет только для контента */
+    background: #eeeaa881; /* Лимонный цвет только для контента */
     color: #000;
     padding: 4rem 2rem;
     max-width: 1000px;
     margin: 0 auto; /* Центрирование прямоугольника */
     text-align: center;
-    border-radius: 10px; /* Закругленные углы (опционально) */
+    border-radius: 5px; /* Закругленные углы */
+    font-family: Spinnaker;
 }
 
 .lemon-title {
@@ -161,4 +171,81 @@ ul li a:hover {
     font-size: 1.5rem;
     font-weight: 500;
     font-style: italic;
+}
+
+.st-section {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.st-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.st-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: Spinnaker;
+}
+
+.st-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.st-description {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+.offers-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.offer-card {
+    text-align: left;
+    max-width: 400px;
+    font-family: Spinnaker;
+}
+
+.offer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    margin-bottom: 2rem;
+}
+
+.ph-1, .ph-2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.des, .desc {
+    font-size: 1rem;
+    opacity: 0.7; 
+    line-height: 1.5;
+}
+
+.book-btn {
+    background: #ffffff;
+    color: rgba(216, 149, 26, 0.644);
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    border: 1px solid #c28a21a6; /* Золотисто-оранжевая обводка */
+    border-radius: 1px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.book-btn:hover {
+    background: #e0aa4681;
+    border-color: #e27e21ec; 
 }
