@@ -120,7 +120,7 @@ ul li a:hover {
 }
 
 .main-hero {
-    height: 100vh; /* На весь экран */
+    height: 70vh; /* На весь экран */
     color: white;
     margin-top: 300px; /* Отступ ниже шапки */
     padding: 3rem; /* Отступы со всех сторон */
@@ -248,4 +248,70 @@ ul li a:hover {
 .book-btn:hover {
     background: #e0aa4681;
     border-color: #e27e21ec; 
+}
+
+.first-section {
+    background: 
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url('image\ 16.png');
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.first-content {
+    max-width: 600px;
+    text-align: left;
+    margin-left: 10%; /* Отступ от левого края */
+    padding-right: 2rem;
+}
+
+.first-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-family: "Spinnaker", sans-serif;
+}
+
+.first-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 300;
+    font-family: "Spinnaker", sans-serif;
+}
+
+.main-footer {
+    background: #1a237e; /* Темно-синий цвет */
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 3rem; /* Равное расстояние между текстами */
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    font-family: "Spinnaker", sans-serif;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: "Inknut Antiqua", sans-serif;
 }
