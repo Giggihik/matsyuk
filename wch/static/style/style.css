@@ -22,7 +22,7 @@ body {
 
 .nav-container {
     height: 135px;
-    width: 1333px;
+    width: 1443px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -237,7 +237,7 @@ ul li a:hover {
     color: rgba(216, 149, 26, 0.644);
     padding: 0.5rem 1.5rem;
     font-size: 0.9rem;
-    border: 1px solid #c28a21a6; /* Золотисто-оранжевая обводка */
+    border: 1px solid #c28a21a6; 
     border-radius: 1px;
     font-weight: 500;
     cursor: pointer;
@@ -315,3 +315,4 @@ ul li a:hover {
     font-weight: bold;
     font-family: "Inknut Antiqua", sans-serif;
 }
+

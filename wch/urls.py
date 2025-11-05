@@ -2,5 +2,6 @@ from wch import views
 from django.urls import path
 
 urlpatterns = [
-    path('', views.root)
+    path('', views.root),
+    path('booking', views.bookings)
 ]
