@@ -1,49 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style/style.css">
-    <title>hotel</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">  
-    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body> 
-    <header class="header">
-    <div class="nav-container">
-        <a href="" class="logo">NEPTUN</a>
-        <nav class="main-nav">
-            <ul class="main-nav-list">
-                <li class="main-nav-list-item"><a href="stays.html">STAYS</a></li>
-                <li class="main-nav-list-item"><a href="dining.html">DINING</a></li>
+{% extends "header-footer.html" %}
+{% load static %}
 
-                <li class="main-nav-list-item"><a href="aquaventure.html">AQUAVENTURE</a></li>
-                <div class="search-bar">
-         <div class="search">
-                <input type="search" placeholder="Search..." class="main_searchbar">
-                <button type="submit" class="search_button">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" 
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
-    </div>
-</div>
-                <li class="main-nav-list-item"><a href="booking.html"> <button class="action-btn">Book Now</button> </a> </li>
-            </ul>  
-        </nav>
-   </div>
-    </header>
+{% block main-link %}
+<link rel="stylesheet" href="{% static 'style/style.css' %}">
+{% endblock %}
+
+{% block main %}
     <section class="main-hero">
         <div class="main-content">
             <h1>WELCOME TO NEPTUN RESORT</h1>
-            <br>
-            <p>your luxury experience starts here</p>
+            <p class="subtitle">your luxury experience starts here</p>
         </div>
     </section>
-
     <section class="lemon-section" id="lemon-section">
         <div class="lemon-content">
             <h1 class="lemon-title">THIS IS THE MOST ULTRA-LUXURY EXPERIENTIAL RESORT IN THE WORLD</h1>
@@ -51,52 +19,31 @@
             <p class="lemon-subtitle">This is Neptun.</p>
         </div>
     </section>
-
     <section class="st-section" id="st-section">
         <div class="st-content">
     <div class="st-header">
             <h2 class="st-title">STAY OFFERS</h2>
-            <br>
             <p class="st-description">This is your moment. Unlock the Royal Experience with exclusive offers at Dubai's newest icon.</p>
         </div>
-            <br> </br>
         <div class="offers-container">
             <div class="offer-card">
                 <img src="static/style/image 14.png" alt="STAY BEYOND RICH"/>
                 <h3 class="ph-1">STAY BEYOND RICH</h3>
                 <p class="des">This is your moment. Unlock the Royal Experience with exclusive offers at Dubai's newest icon.</p>
-                <br>
                 <a href="booking"> <button class="book-btn">Book Now</button> </a>
             </div>
             <div class="offer-card">
                 <img src="static/style/image 15.png" alt="AEON LONGEVITY STAY PACKAGE"/>
                 <h3 class="ph-2">AEON LONGEVITY STAY PACKAGE</h3>
                 <p class="desc">This is your moment. Unlock the Royal Experience with exclusive offers at Dubai's newest icon.</p>
-                <br>
                 <a href="booking"> <button class="book-btn">Book Now</button> </a>
             </div>
         </div>
 </section>
-
 <section class="first-section">
     <div class="first-content">
         <h2 class="first-title">BE THE FIRST</h2>
         <p class="first-description">This is it. This is your moment to experience Dubai's newest icon.Sign up to receive the latest information and updates from Atlantis The Royal. Be the first to know.</p>
     </div>
 </section>
-<footer class="main-footer">
-    <div class="footer-content">
-        <div class="footer-links">
-            <a href="#">What's On</a>
-            <a href="#">Memberships</a>
-            <a href="#">About</a>
-            <a href="#">Conditions</a>
-        </div>
-        /*не доделано*/
-        <div class="footer-logo">
-            <span>NEPTUN</span>
-        </div>
-    </div>
-</footer>
-</body>
-</html>
+{% endblock %}

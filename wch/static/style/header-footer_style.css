@@ -1,0 +1,154 @@
+@import "null.css";
+
+@import url('https://fonts.google.com/share?selection.family=Inknut+Antiqua:wght@300;400;500;600;700;800;900');
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(
+        135deg,
+        rgba(18, 32, 120, 0.682) 20%,
+        rgba(123, 31, 162, 0.438) 80%,
+        rgba(170, 71, 188, 0.478) 30%,
+        rgba(21, 27, 98, 0.493) 100%
+    ) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 1rem 0; 
+}
+
+.nav-container {
+    height: 135px;
+    width: 1443px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+ul li a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+ul li a:hover {
+    color: #4747e4;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 25px;
+    padding: 0.3rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main_searchbar {
+    border: none;
+    outline: none;
+    padding: 0.8rem 1rem;
+    border-radius: 25px;
+    width: 200px;
+    font-size: 0.9rem;
+}
+
+.main_searchbar::placeholder {
+    color: #999;
+}
+
+.search_button {
+    background: #15317c;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.search_button:hover {
+    background: #79247cc0;
+}
+
+.action-btn {
+    background: #11337f; 
+    color: white; 
+    border: none; 
+    padding: 0.5rem 1rem; 
+    border-radius: 4px; 
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500; 
+}
+
+.action-btn:hover {
+    background: #4f3671df; 
+}
+
+.main-footer {
+    background: #1a237e; 
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 3rem; 
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    font-family: "Spinnaker", sans-serif;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: "Inknut Antiqua", sans-serif;
+}

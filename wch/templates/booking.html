@@ -1,3 +1,9 @@
+{% extends "header-footer.html" %}
+
+{% block main-link %}
+<link rel="stylesheet" href="../static/style/style.css">
+{% endblock %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +13,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="nav-container">
-            <div class="logo">
+    <header class="booking-header">
+        <div class="booking-nav-container">
+            <div class="booking-logo">
                 <a href="full.html">NEPTUN</a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="full.html">Home</a></li>
-                    <li><a href="booking.html" class="active">Booking</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
+
     <main class="booking-main">
-        <h1>Booking Page</h1>
+        <h1 class="booking-title">BOOK A ROOM</h1>
+        
+        <div class="date-selector">
+            <div class="date-box">
+                <span class="date-label">Check-In Date</span>
+            </div>
+            <div class="date-box">
+                <span class="date-label">Check-Out Date</span>
+            </div>
+        </div>
     </main>
 </body>
 </html>
