@@ -1,7 +1,13 @@
+.booking-page {
+    min-height: calc(100vh - 200px); 
+    display: flex;
+    margin-top: 135px;
+}
 
 .booking-main {
-    padding: 4rem 2rem;
+    padding: 3rem;
     text-align: center;
+    width: 100%;
 }
 
 .booking-title {
@@ -9,28 +15,28 @@
     font-weight: bold;
     margin-bottom: 3rem;
     font-family: "Spinnaker", sans-serif;
-    color: #333;
+    color: #201680f3;
 }
 
-/* Контейнер для дат */
 .date-selector {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .date-box {
-    background: linear-gradient(135deg, #D4AF37, #FFD700); /* Золотой градиент */
+    background: white;
     padding: 2rem;
     border-radius: 10px;
     flex: 1;
-    min-width: 200px;
+    min-width: 250px;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 1rem;
     transition: transform 0.3s ease;
 }
 
@@ -42,6 +48,14 @@
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
+    font-family: "Spinnaker", sans-serif;
+}
+
+.date-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
     font-family: "Spinnaker", sans-serif;
 }
 

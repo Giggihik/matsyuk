@@ -17,8 +17,8 @@
     color: white;
     display: flex;
     align-items: center;
-    padding-left: 10%; /* Текст слева с отступом */
-    text-align: left; /* Текст слева */
+    padding-left: 10%; 
+    text-align: left; 
     font-size: 2.5rem;
     font-family: Spinnaker;
 }
@@ -43,13 +43,13 @@
 }
 
 .lemon-content {
-    background: #eeeaa881; /* Лимонный цвет только для контента */
+    background: #eeeaa881; 
     color: #000;
     padding: 4rem 2rem;
     max-width: 1000px;
     margin: 0 auto; /* Центрирование прямоугольника */
     text-align: center;
-    border-radius: 5px; /* Закругленные углы */
+    border-radius: 5px;
     font-family: Spinnaker;
 }
 
@@ -165,7 +165,7 @@
 .first-content {
     max-width: 600px;
     text-align: left;
-    margin-left: 10%; /* Отступ от левого края */
+    margin-left: 10%; 
     padding-right: 2rem;
 }
 

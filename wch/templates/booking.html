@@ -1,37 +1,31 @@
 {% extends "header-footer.html" %}
+{% load static %}
 
 {% block main-link %}
-<link rel="stylesheet" href="../static/style/style.css">
+<link rel="stylesheet" href="{% static 'style/booking.css' %}">
 {% endblock %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking - Neptun Resort</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="booking-header">
-        <div class="booking-nav-container">
-            <div class="booking-logo">
-                <a href="full.html">NEPTUN</a>
-            </div>
-        </div>
-    </header>
-
-    <main class="booking-main">
+{% block main %}
+<main class="booking-page">
+    <div class="booking-main">
         <h1 class="booking-title">BOOK A ROOM</h1>
         
         <div class="date-selector">
             <div class="date-box">
                 <span class="date-label">Check-In Date</span>
+                <input type="date" class="date-input">
             </div>
+            
             <div class="date-box">
                 <span class="date-label">Check-Out Date</span>
+                <input type="date" class="date-input">
             </div>
         </div>
-    </main>
-</body>
-</html>
+    </div>
+<section class="booking-people">
+    <div class="people">
+        
+    </div>
+</section>
+</main>
+{% endblock %}
