@@ -122,7 +122,14 @@ ul li a:hover {
     background: #1a237e; 
     color: white;
     padding: 2rem 0;
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    height: 50px; 
 }
+
+
 
 .footer-content {
     max-width: 1200px;
@@ -152,3 +159,4 @@ ul li a:hover {
     font-weight: bold;
     font-family: "Inknut Antiqua", sans-serif;
 }
+

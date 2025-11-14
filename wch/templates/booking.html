@@ -15,17 +15,44 @@
                 <span class="date-label">Check-In Date</span>
                 <input type="date" class="date-input">
             </div>
-            
             <div class="date-box">
                 <span class="date-label">Check-Out Date</span>
                 <input type="date" class="date-input">
             </div>
         </div>
     </div>
-<section class="booking-people">
-    <div class="people">
+    <div class="room-selection">
+            <div class="room-header">
+                <h3 class="room-title">ROOM 1</h3>
+                <button class="add-room-btn">
+                    ADD ANOTHER ROOM
+                    <span class="plus-icon">+</span>
+                </button>
+            </div>
+            
+            <div class="guest-selection">
+                <div class="guest-option">
+                    <label class="guest-label">Adults</label>
+                    <select class="guest-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                
+                <div class="guest-option">
+                    <label class="guest-label">Children</label>
+                    <select class="guest-select">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
         
     </div>
-</section>
 </main>
 {% endblock %}
