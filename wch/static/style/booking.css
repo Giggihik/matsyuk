@@ -1,36 +1,41 @@
-.booking-page {
+.booking-information {
     min-height: calc(100vh - 200px);
+    padding: 2rem;
+    margin-top: 135px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 135px;
 }
 
-.booking-main {
-    padding: 2rem;
-    text-align: center;
-    width: 100%;
+.container {
     max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .booking-title {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 3rem;
     font-family: "Spinnaker", sans-serif;
-    color: #201680f3;
+    color: #333;
+    text-align: center;
 }
 
-.date-selector {
+.date-selection {
+    margin-bottom: 3rem;
+}
+
+.date-field {
     display: flex;
     justify-content: center;
     gap: 2rem;
     max-width: 800px;
-    margin: 0 auto 3rem; 
+    margin: 0 auto;
 }
 
 .date-box {
-    background: white;
+    background: linear-gradient(135deg, #D4AF37, #FFD700);
     padding: 2rem;
     border-radius: 10px;
     flex: 1;
@@ -55,20 +60,185 @@
 }
 
 .date-input {
-    padding: 0.5rem;
+    padding: 0.8rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
     font-family: "Spinnaker", sans-serif;
+    background: white;
+    width: 100%;
 }
 
- .date-box {
-   min-width: auto;
-}
-
-.room-selection {
+.guest-field {
     max-width: 800px;
-    margin: 0 auto; 
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.guest-title-borders {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.guest-title {
+    font-family: "Spinnaker", sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-right: 1rem;
+    white-space: nowrap;
+}
+
+.guest-line {
+    flex-grow: 1;
+    height: 2px;
+    background: #D4AF37;
+}
+
+.guest-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.name-fields {
+    display: flex;
+    gap: 1rem;
+}
+
+.name-input, .guest-input {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: "Spinnaker", sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+
+.name-input {
+    flex: 1;
+}
+
+.name-input:focus, .guest-input:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+.room-type-selection {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.room-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.room-type-label {
+    display: block;
+    cursor: pointer;
+}
+
+.room-type-input {
+    display: none;
+}
+
+.room-type-card {
+    background: white;
+    border: 2px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-type-card:hover {
+    border-color: #D4AF37;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+}
+
+.room-type-input:checked + .room-type-card {
+    border-color: #D4AF37;
+    background: linear-gradient(135deg, #FFF9E6, #FFF0C2);
+    transform: scale(1.02);
+}
+
+.room-type-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.room-type-name {
+    font-family: "Spinnaker", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.room-type-price {
+    font-family: "Spinnaker", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.room-type-description {
+    font-family: "Spinnaker", sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.room-type-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: auto;
+}
+
+.room-type-feature {
+    font-family: "Spinnaker", sans-serif;
+    font-size: 0.8rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.room-type-feature::before {
+    content: "✓";
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+/* Стили для выбора комнаты */
+.room-selection-field {
+    max-width: 800px;
+    margin: 0 auto 3rem;
     padding: 2rem;
     background: white;
     border-radius: 10px;
@@ -82,11 +252,10 @@
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #eee;
-    gap: 2rem;
 }
 
 .room-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #333;
     font-family: "Spinnaker", sans-serif;
@@ -95,7 +264,7 @@
 
 .add-room-btn {
     background: transparent;
-    border: 1px solid #D4AF37;
+    border: 2px solid #D4AF37;
     color: #D4AF37;
     padding: 0.7rem 1.5rem;
     border-radius: 25px;
@@ -106,7 +275,6 @@
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
-    margin-left: auto;
 }
 
 .add-room-btn:hover {
@@ -147,11 +315,40 @@
     min-width: 120px;
 }
 
+.booking-action {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.booking-submit-btn {
+    background: linear-gradient(135deg, #D4AF37, #FFD700);
+    color: #333;
+    border: none;
+    padding: 1.2rem 3rem;
+    border-radius: 25px;
+    font-family: "Spinnaker", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.booking-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Адаптивность */
 @media (max-width: 768px) {
-    .room-header {
+    .booking-information {
+        padding: 1rem;
+        margin-top: 100px;
+    }
+    
+    .date-field {
         flex-direction: column;
         gap: 1rem;
-        text-align: center;
     }
     
     .guest-selection {
@@ -159,7 +356,57 @@
         gap: 1.5rem;
     }
     
+    .room-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .booking-title {
+        font-size: 2rem;
+    }
+    
+    .date-box {
+        min-width: auto;
+    }
+    
+    .name-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+    
     .guest-select {
         min-width: 100%;
+    }
+    
+    .room-types-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .guest-field,
+    .room-type-selection,
+    .room-selection-field {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .booking-submit-btn {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-title {
+        font-size: 1.8rem;
+    }
+    
+    .date-box {
+        padding: 1.5rem;
+    }
+    
+    .room-type-image {
+        height: 150px;
     }
 }

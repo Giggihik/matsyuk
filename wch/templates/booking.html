@@ -6,53 +6,139 @@
 {% endblock %}
 
 {% block main %}
-<main class="booking-page">
-    <div class="booking-main">
+<section class="booking-information">
+    <div class="container">
         <h1 class="booking-title">BOOK A ROOM</h1>
-        
-        <div class="date-selector">
-            <div class="date-box">
-                <span class="date-label">Check-In Date</span>
-                <input type="date" class="date-input">
-            </div>
-            <div class="date-box">
-                <span class="date-label">Check-Out Date</span>
-                <input type="date" class="date-input">
-            </div>
+
+        {% if hotel %}
+        <div class="hotel-info">
+            <h2>{{ hotel.name }}</h2>
+            <p>{{ hotel.description }}</p>
         </div>
-    </div>
-    <div class="room-selection">
-            <div class="room-header">
-                <h3 class="room-title">ROOM 1</h3>
-                <button class="add-room-btn">
-                    ADD ANOTHER ROOM
-                    <span class="plus-icon">+</span>
-                </button>
-            </div>
+        {% endif %}
+
+        <form method="POST" class="booking_main-information">
+            {% csrf_token %}
             
-            <div class="guest-selection">
-                <div class="guest-option">
-                    <label class="guest-label">Adults</label>
-                    <select class="guest-select">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
+            <div class="date-selection">
+                <div class="date-field">
+                    <div class="date-box">
+                        <span class="date-label">Check-In Date</span>
+                        <input type="date" name="check_in" class="date-input" required>
+                    </div>
+                    
+                    <div class="date-box">
+                        <span class="date-label">Check-Out Date</span>
+                        <input type="date" name="check_out" class="date-input" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guest-field">
+                <div class="guest-title-borders">
+                    <p class="guest-title">Guest Information</p>
+                    <div class="guest-line"></div>
                 </div>
                 
-                <div class="guest-option">
-                    <label class="guest-label">Children</label>
-                    <select class="guest-select">
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                <div class="guest-inputs">
+                    <div class="name-fields">
+                        <input type="text" name="first_name" placeholder="First Name" class="name-input" required>
+                        <input type="text" name="last_name" placeholder="Last Name" class="name-input" required>
+                    </div>
+                    <input type="email" name="email" placeholder="Email Address" class="guest-input" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" class="guest-input" required>
+                    <input type="text" name="passport" placeholder="Passport Number" class="guest-input" required>
                 </div>
             </div>
-        </div>
-        
+
+           <div class="room-type-selection">
+    <div class="guest-title-borders">
+        <p class="guest-title">Select Room Type</p>
+        <div class="guest-line"></div>
     </div>
-</main>
+    
+    <div class="room-types-grid">
+        {% for room_type in room_types %}
+       <label class="room-type-label">
+    <input type="radio" name="room_type" value="{{ room_type.id }}" class="room-type-input" {% if forloop.first %}checked{% endif %}>
+    <div class="room-type-card">
+        <img src="{% static 'style/image 23.png' %}{{ forloop.counter|add:13 }}.png" alt="{{ room_type.name }}" class="room-type-image">
+        <h4 class="room-type-name">{{ room_type.name }}</h4>
+        <p class="room-type-price">${{ room_type.price_per_night }}/night</p>
+        <p class="room-type-description">{{ room_type.description }}</p>
+        <div class="room-type-features">
+            <span class="room-type-feature">Free WiFi</span>
+            <span class="room-type-feature">Breakfast included</span>
+            <span class="room-type-feature">Ocean view</span>
+            <span class="room-type-feature">King size bed</span>
+        </div>
+    </div>
+</label>
+{% empty %}
+<label class="room-type-label">
+    <input type="radio" name="room_type" value="1" class="room-type-input" checked>
+    <div class="room-type-card">
+        <img src="{% static 'style/image 22.png' %}" alt="Luxury Suite" class="room-type-image">
+        <h4 class="room-type-name">Luxury Suite</h4>
+        <p class="room-type-price">$500/night</p>
+        <p class="room-type-description">Spacious suite with ocean view and premium amenities</p>
+        <div class="room-type-features">
+            <span class="room-type-feature">Free WiFi</span>
+            <span class="room-type-feature">Breakfast included</span>
+            <span class="room-type-feature">Ocean view</span>
+        </div>
+    </div>
+</label>
+
+<label class="room-type-label">
+    <input type="radio" name="room_type" value="2" class="room-type-input">
+    <div class="room-type-card">
+        <img src="{% static 'style/image 20.png' %}" alt="Presidential Suite" class="room-type-image">
+        <h4 class="room-type-name">Presidential Suite</h4>
+        <p class="room-type-price">$1200/night</p>
+        <p class="room-type-description">Ultimate luxury with private pool and butler service</p>
+        <div class="room-type-features">
+            <span class="room-type-feature">Free WiFi</span>
+            <span class="room-type-feature">Breakfast included</span>
+            <span class="room-type-feature">Private pool</span>
+        </div>
+    </div>
+</label>
+{% endfor %}
+    </div>
+</div>
+            <div class="room-selection-field">
+                <div class="room-header">
+                    <h3 class="room-title">ROOM 1</h3>
+                </div>
+                
+                <div class="guest-selection">
+                    <div class="guest-option">
+                        <label class="guest-label">Adults</label>
+                        <select class="guest-select" name="adults" required>
+                            <option value="1">1 Adult</option>
+                            <option value="2" selected>2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                        </select>
+                    </div>
+                    
+                    <div class="guest-option">
+                        <label class="guest-label">Children</label>
+                        <select class="guest-select" name="children">
+                            <option value="0" selected>0 Children</option>
+                            <option value="1">1 Child</option>
+                            <option value="2">2 Children</option>
+                            <option value="3">3 Children</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-action">
+                <button type="submit" class="booking-submit-btn">Complete Booking</button>
+            </div>
+        </form>
+    </div>
+</section>
 {% endblock %}

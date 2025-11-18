@@ -6,38 +6,63 @@
 {% endblock %}
 
 {% block main %}
+    {% comment %} <img src="{% static 'style/image 3.png' %}" alt="Hotel" class="main-image"> {% endcomment %}
+    <div class="container">
     <section class="main-hero">
         <div class="main-content">
-            <h1>WELCOME TO NEPTUN RESORT</h1>
-            <p class="subtitle">your luxury experience starts here</p>
+            <h1>WELCOME TO {{ hotel.name|default:"NEPTUN RESORT" }}</h1>
+            <br>
+            <p>your luxury experience starts here</p>
         </div>
     </section>
     <section class="lemon-section" id="lemon-section">
         <div class="lemon-content">
             <h1 class="lemon-title">THIS IS THE MOST ULTRA-LUXURY EXPERIENTIAL RESORT IN THE WORLD</h1>
             <p class="lemon-description">Embrace a new standard of luxury, where the highest level of service sets a new benchmark for excellence. This is the place where something incredible happens at every moment of your stay.</p>
-            <p class="lemon-subtitle">This is Neptun.</p>
+            <p class="lemon-subtitle">This is {{ hotel.name|default:"Neptun" }}.</p>
         </div>
     </section>
+    </div>
     <section class="st-section" id="st-section">
         <div class="st-content">
     <div class="st-header">
             <h2 class="st-title">STAY OFFERS</h2>
+            <br>
             <p class="st-description">This is your moment. Unlock the Royal Experience with exclusive offers at Dubai's newest icon.</p>
         </div>
+            <br> </br>
         <div class="offers-container">
+ 
+            {% for room_type in room_types %}
             <div class="offer-card">
-                <img src="static/style/image 14.png" alt="STAY BEYOND RICH"/>
+                <img src="{% static 'style/image 14.png' %}" alt="{{ room_type.name }}"/>
+                <h3 class="ph-1">{{ room_type.name }}</h3>
+                <p class="des">{{ room_type.description }}</p>
+                <br>
+                <a href="{% url 'bookings' %}"> 
+                    <button class="book-btn">Book Now</button> 
+                </a>
+            </div>
+            {% empty %}
+            <div class="offer-card">
+                <img src="{% static 'style/image 14.png' %}" alt="STAY BEYOND RICH"/>
                 <h3 class="ph-1">STAY BEYOND RICH</h3>
                 <p class="des">This is your moment. Unlock the Royal Experience with exclusive offers at Dubai's newest icon.</p>
-                <a href="booking"> <button class="book-btn">Book Now</button> </a>
+                <br>
+                <a href="{% url 'bookings' %}"> 
+                    <button class="book-btn">Book Now</button> 
+                </a>
             </div>
             <div class="offer-card">
-                <img src="static/style/image 15.png" alt="AEON LONGEVITY STAY PACKAGE"/>
+                <img src="{% static 'style/image 15.png' %}" alt="AEON LONGEVITY STAY PACKAGE"/>
                 <h3 class="ph-2">AEON LONGEVITY STAY PACKAGE</h3>
                 <p class="desc">This is your moment. Unlock the Royal Experience with exclusive offers at Dubai's newest icon.</p>
-                <a href="booking"> <button class="book-btn">Book Now</button> </a>
+                <br>
+                <a href="{% url 'bookings' %}"> 
+                    <button class="book-btn">Book Now</button> 
+                </a>
             </div>
+            {% endfor %}
         </div>
 </section>
 <section class="first-section">
