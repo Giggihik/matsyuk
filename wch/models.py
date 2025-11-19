@@ -6,6 +6,7 @@ class Hotel(models.Model):
     phone_number = models.CharField("Телефон", max_length=20)
     email = models.EmailField("Email")  
     description = models.TextField("Описание")
+    img = models.ImageField(upload_to='wch_imgs/', verbose_name='Фото', default='')
     
     class Meta:
         verbose_name = "Отель"
@@ -19,6 +20,7 @@ class RoomType(models.Model):
     name = models.CharField("Тип комнаты", max_length=50)
     description = models.TextField("Описание")
     price_per_night = models.DecimalField("Цена за ночь", max_digits=10, decimal_places=2)  
+    img = models.ImageField(upload_to='wch_imgs/', verbose_name='Фото', default='')
     
     class Meta:
         verbose_name = "Тип комнаты"
@@ -77,6 +79,7 @@ class Booking(models.Model):
     status = models.CharField("Статус", max_length=20, choices=STATUS_CHOICES, default="pending")
     total_amount = models.DecimalField("Итоговая стоимость", max_digits=10, decimal_places=2, blank=True, null=True)
     created_at = models.DateTimeField("Дата создания", auto_now_add=True)
+    img = models.ImageField(upload_to='wch_imgs/', verbose_name='Фото', default='')
     
     class Meta:
         verbose_name = "Бронирование"

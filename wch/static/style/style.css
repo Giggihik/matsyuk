@@ -11,7 +11,7 @@
 .main-hero {
     background: 
         linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-        url('../style/image\ 3.png') cover no-repeat;
+        url('static/style/media/image3.png') cover no-repeat;
     margin-top: 135px; 
     height: 100vh;
     color: white;

@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block main %}
-    {% comment %} <img src="{% static 'style/image 3.png' %}" alt="Hotel" class="main-image"> {% endcomment %}
+    <img src="../static{{hotel.img.url}}" alt="Hotel" class="main-image">
     <div class="container">
     <section class="main-hero">
         <div class="main-content">
@@ -35,7 +35,7 @@
  
             {% for room_type in room_types %}
             <div class="offer-card">
-                <img src="{% static 'style/image 14.png' %}" alt="{{ room_type.name }}"/>
+                <img src="static/style/media/image3.png" alt="{{ room_type.name }}"/>
                 <h3 class="ph-1">{{ room_type.name }}</h3>
                 <p class="des">{{ room_type.description }}</p>
                 <br>
@@ -45,7 +45,7 @@
             </div>
             {% empty %}
             <div class="offer-card">
-                <img src="{% static 'style/image 14.png' %}" alt="STAY BEYOND RICH"/>
+                <img src="../static{{_imgs.url}}" alt="STAY BEYOND RICH"/>
                 <h3 class="ph-1">STAY BEYOND RICH</h3>
                 <p class="des">This is your moment. Unlock the Royal Experience with exclusive offers at Dubai's newest icon.</p>
                 <br>
